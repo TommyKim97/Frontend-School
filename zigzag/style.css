@@ -1,0 +1,172 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+   /*
+   font-weight: 500;
+   font-weight: 700;
+   */
+}
+
+@media (min-width:1200px) {
+
+}
+@media (max-width:520px) {
+
+}
+/* 초기화 */
+* {
+   padding: 0;
+   margin: 0 auto;
+   list-style: none;
+}
+
+/* 배경색 */
+body {
+   background-color: #51318b;
+}
+
+/* 전체 크기 */
+.wrapper {
+   width: 1080px;
+   margin-bottom: 100px;
+}
+
+img {
+   max-width: 100%;
+   vertical-align: top;
+   flex-shrink: 0;
+}
+.header-tit {
+   display: flex;
+   margin: 100px 0;
+   align-items: center;
+}
+
+.tit-h1 {
+   position: absolute;
+   flex-direction: column;
+   color: #fff;
+   /* width: 26%; */
+   font-weight: normal;
+   font-size: 40px;
+}
+
+.tit-h1 strong {
+   display: block;
+   font-weight: normal;
+   border-bottom: 1px solid #d9501a;
+   box-shadow: inset 0 -20px #d9501a;
+}
+
+.tit-p {
+   margin-left: 24%;
+   display: flex;
+   align-items: center;
+   font-size: 14px;
+   max-width: 600px;
+   color: #a887e1;
+}
+
+h2 {
+   font-size: 30px;
+   vertical-align: middle;
+   text-align: center;
+   display: flex;
+   color: white;
+   justify-content: center;
+   line-height: 170px;
+   font-weight: 400;
+}
+
+
+.tit-p::before {
+   content: "";
+   width: 280px;
+   height: 2px;
+   margin: 0 30px;
+   border-bottom: 2px solid #a887e1;
+}
+
+.item {
+   height: 170px;
+   display: flex;
+   flex-direction: row;
+   color: #000;
+   margin-bottom: 24px;
+}
+
+.img-cover {
+   width: 26%;
+   flex-shrink: 0;
+}
+
+.rest .img-cover {
+   background-image:url(./images/photo01.png);
+   background-size: cover;
+   opacity: 0.7;
+}
+
+.craft .img-cover {
+   background-image: url(./images/photo02.png);
+   background-size: cover;
+   opacity: 0.7;
+
+}
+
+.scrap .img-cover {
+   background-image: url(./images/photo03.png);
+   background-size: cover;
+   opacity: 0.7;
+}
+
+.cont-wrap {
+   height: 170px;
+   width: 74%;
+   background-color: white;
+}
+
+.contents {
+   flex: 1 1 auto;
+   height: 170px;
+   margin: 24px;
+}
+
+.contents ul {
+   margin-top: 24px;
+   font-size: 14px;
+   line-height: 25px;
+}
+
+.contents strong {
+   font-size: 18px;
+   color: #51318b;
+}
+
+.rest {
+   display: flex;
+   flex-grow: 1;
+}
+
+.craft {
+   display: flex;
+   flex-grow: 1;
+}
+
+.scrap {
+   display: flex;
+   flex-grow: 1;
+}
+
+li::before {
+   display: inline-block;
+   content: "";
+   background-color: #a887e1;
+   width: 10px;
+   height: 10px;
+   border-radius: 50%;
+   margin-right: 10px;
+}
+
+.item:nth-child(2) {
+   display: flex;
+   flex-direction: row-reverse;
+}
