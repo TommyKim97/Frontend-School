@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>console</title>
+</head>
+<body>
+    <script>
+        console.log("hello");
+
+        let data = {
+            a : 10,
+            one: 1,
+            two : 2,
+            three : 3,
+            c : 100,
+            b : 3
+        };
+        //그냥 출력했을 때는 알파벳 순
+        console.dir(data);
+
+        //순회를 돌았을 때는 순서 보장
+        // for (const d in data) {
+        //     console.log(data2);
+        // }
+        let data2 = [10, 20, 30];
+        console.dir(data2);
+
+        // console.info("hello world");
+        console.group("one");
+        console.log("이구아나/팀원");
+        console.log("보리/팀원");
+        console.group("two");
+        console.log("소영/팀원");
+        console.log("사자/팀원");
+
+        console.groupEnd();
+        console.log("end");
+        console.groupEnd();
+        console.log("end");
+
+        console.table(data);
+
+        console.warn("error 실행은 해주지만 경고는 한다.")
+        console.error("정신차렷!")
+
+        // 추가
+        console.log("%chello world", "color:green"); //색을 바꿔서 출력할 수 있음
+    </script>
+</body>
+</html>
