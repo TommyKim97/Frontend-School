@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>String</title>
+    </head>
+    <body>
+        <script>
+            let txt = "abcAHelloBC";
+            let txt2 = "Iguana young";
+            let regExp = /[A-Z]/g;
+            console.log(txt.search(regExp)); //3
+
+            // slice(시작인덱스, 종료인덱스) : 시작인덱스부터 종료인덱스-1까지 반환
+            console.log(txt2.slice(1, 3)); //gu
+            console.log(txt2.slice(3, 1)); // 작동하지 않습니다.
+            console.log(txt2.slice(2)); //uana young
+
+            // substring(시작인덱스, 종료인덱스) : 시작인덱스부터 종료인덱스-1까지 반환합니다.
+            console.log(txt2.substring(1, 3)); //gu
+            console.log(txt2.substring(3, 1)); // gu
+            console.log(txt2.substring(2));//uana young
+
+            // substr(시작위치, 길이) : 시작인덱스부터 길이만큼 반환합니다.
+            // https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substr
+            // 명세에서 사라질 수도 있음
+            console.log(txt2.substr(8, 3)); //oun
+            console.log(txt2.substr(txt2.indexOf("C"), 3)); //g
+
+            console.log("-----")
+            //replace(바꿀 문자열, 바뀔 문자열)
+            console.log(txt2.replace("young", "kim")); //Iguana Kim
+            console.log(txt2.replace(/"Iguana"/g, "Young")); // "도 문자열로 처리합니다. //Iguana Young
+            console.log(txt2.replace(/I/g, "2")); //2guana young
+            console.log(txt2.replaceAll("young", "영")); //Iguana 영
+
+            console.log(txt.toUpperCase()); //ABCAHELLOBC
+            console.log(txt.toLowerCase()); //abcahellobc
+
+            console.log(txt.includes("H")); //true
+            console.log(txt.includes("Z")); //false
+
+
+            console.log("------")
+            //split
+            console.log(txt2.split(" ")); // Iguana, young
+            console.log("010-1234-5678".split("")); // 0, 1, 0, -, 1, 2, 3, 4, -,  5, 6, 7, 8
+
+            console.log("------")
+            //trim
+            console.log("         abc"); //한줄 개행 후 abc
+            console.log("         abc".trim()); //abc
+            console.log("         a b c".trim()); //a b c
+            console.log("         a b c              ".trim()); //a b c
+        </script>
+    </body>
+</html>
+
+
+        </script>
+    </body>
+</html>
