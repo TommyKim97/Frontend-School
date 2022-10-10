@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(typeof "hello world"); //string
+        console.log(typeof 100); //number
+        console.log(typeof NaN); //number
+        console.log(typeof true); //boolean
+        console.log(typeof undefined); //undefined
+        console.log(typeof Symbol()); //symbol
+        console.log(typeof null); //object, 헷갈리지 않기
+        console.log(typeof []); //object, 헷갈리지 않기
+        console.log(typeof {}); //object, 헷갈리지 않기
+        console.log(typeof function() {}); //function
+        console.log(typeof /정규표현식/gi); //object
+
+        console.log("-------");
+        console.log(10+10); //20
+        console.log("10" + 10); //1010
+        console.log("10" + "10"); //1010
+        console.log(10 + "10"); //1010
+
+        console.log("-------");
+        //형변환은 형태를 변경, 타입을 변경하는 것을 의미한다.
+        console.log(Number("10") + Number("10")); //20, 권장하는 방법은 아님
+        console.log(parseInt("10") + parseInt("10")); //20, 권장하는 방법
+        console.log(String(10) + String(10)); //1010
+
+    </script>
+</body>
+</html>
