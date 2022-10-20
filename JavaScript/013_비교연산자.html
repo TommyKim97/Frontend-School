@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const one = 10;
+        const two = 3;
+        const one_ = "10";
+
+        console.log(one > two);
+        console.log(one >= two);
+        console.log(one < two);
+        console.log(one <= two);
+        console.log(one == two);
+        console.log(one === two); //다른 언어에는 없음.
+        onsole.log(one !== two); // 다른 언어에 없음.
+
+        console.log("--------");
+
+        // 헷갈리기 쉬운 것
+        console.log(one == one_); //true, 자바스크립트는 너무 관대한 언어다.
+        console.log(one === one_); //false
+        // 다른 언어의 ==와 같음. 견고한 코딩을 위해 ===를 권고
+    </script>
+</body>
+</html>
