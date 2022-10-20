@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>bool</title>
-    </head>
-    <body>
-        <script>
-            // const(참조 변경 불가), let(변경 가능), var(X)
-            let one = true; // 다른 언어는 True인 경우도 있습니다.
-            let two = false;
-            let three;
-            let four = null;
-            let five = Infinity; // 비교
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bool</title>
+</head>
+<body>
+    <script>
+        // const(참조 변경 불가), let(변경 가능), var(스코프를 쓰지 않기때문에 견고한 코딩이 불가능하다)
+        // const로 쓰면 해당 변수가 변경될지 신경쓸 필요가 없다. 대부분 const로 표현하기
+        // let을 쓰면 코드리뷰하는 사람이 아 중간에 변경될 일이 있구나 판단하게 된다.
+        let one = true; //다른 언어는 true인 경우도 있다.
+        let two = false;
+        let three;
+        let four = null;
+        let five = Infinity; //비교할 때 무한대수가 필요할 때가 있다.
 
-            console.log(Boolean("")); // false
-            console.log(Boolean(" ")); // true
-            console.log(Boolean("abc")); // true
-            console.log(Boolean(0)); // false
-            console.log(Boolean(100)); // true
-            console.log(Boolean(-100)); // true
-            console.log(Boolean(three)); // false
-            console.log(Boolean(four)); // false
-            console.log(Boolean(five)); // true
-            one = 0;
+        console.log(Boolean("")); //false
+        console.log(Boolean(" ")); //true
+        console.log(Boolean("abc")); //true
+        console.log(Boolean(0)); //false
+        console.log(Boolean(100)); //true
+        console.log(Boolean(-100)); //true
+        console.log(Boolean(three)); //false
+        console.log(Boolean(four)); //false
+        console.log(Boolean(five)); //true
 
-            // 우리를 힘들게 하는 JS
-            console.log(Boolean([])); //true
-            console.log(Boolean({})); //true
+        
+        one = 0;
 
-            if (one) {
-                console.log("hello");
-            } else {
-                console.log("world");
-            } //hello
-        </script>
-    </body>
+        // 우리를 힘들게하는 JS
+        console.log(Boolean([])); //true
+        // 비어 있는데 왜 참인가?
+        //while문은 서버를 잡아먹는다. 무한반복
+
+        console.log(Boolean({})); //true
+        // 
+
+
+
+        if (one) {
+            console.log("hello");
+        } else {
+            console.log("world"); //world
+        }
+    </script>
+</body>
 </html>
