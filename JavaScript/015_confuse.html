@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(true == 1); //true
+        console.log(true === 1); //false
+
+        console.log(false === 0); //false
+        console.log(false == 0); //true
+
+        console.log(NaN == NaN); //false ??? 
+        //NaN은 자기자신이 자기자신이 아닌 특이 케이스
+        //NaN은 1시간동안 하니 그때 다시 수업 예정
+        console.log(NaN === NaN);
+
+        console.log("-2-");
+        //true일 것 같은 혼란스러운 녀석들
+        console.log(false == null); //false
+        console.log(false == NaN); //false
+        console.log(false == undefined); //false
+
+        console.log("-3-");
+        //+ 연산자를 이용한 형변환
+        // 암묵적 형변환은 의도를 파악하기 어려워서 사용을 자제함
+        console.log(+false); //0
+        console.log(+true); //1
+        console.log(false * 1); //0
+        console.log(true * 1); //1
+        console.log(1 + ""); //1, string
+        console.log(NaN + ""); //NaN
+        console.log(Infinity + ""); //Infinity, string
+        console.log(true + ""); //"true"
+        console.log(false + ""); //"false"
+        console.log("12" + 1); //"121"
+        console.log(+"100" + 10); //110
+        
+        console.log(0 == -0); //true
+
+        console.log(+"10" + +"10"); //20
+
+        // 이렇게 하면 안 된다!!! 잘못된 예시
+        console.log("2" + "2" - "2");//20
+        console.log("2" + "2");//"22"
+        console.log("2" - "2");//문법적 오류, 자스는 오류에 관대해서 숫자로 연산하는 구나 하고 Number로 0 출력해줌
+
+
+
+    
+    </script>
+</body>
+</html>
